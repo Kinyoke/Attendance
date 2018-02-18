@@ -1,0 +1,48 @@
+*{box-sizing: border-box;}
+form h1{ font-size: 22px; margin: 20px 0px 20px 0px; padding: 15px 20px 20px 15px; color: rgb(100,100,100); font-family: 'MathJax_Fraktur'; font-weight: bold; background-color: rgb(255,255,255); }
+form button{ color: white; font-family: cursive; font-size: 13px; }
+
+.menu-right{ float: right; margin-top: 10px; margin-right: 10px; height: 38px; width: 43px; border: 1px solid transparent; border-radius: 5px;}
+.menu-right:hover{ cursor: pointer; border-color: rgb(255,255,255); background-color: rgb(255,255,255);}
+.bar{
+    width: 30px;
+    height: 4px;
+    background-color: rgb(200,200,200);
+    margin: 6px 5px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+#button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: rgb(100,200,100);
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+}
+
+.lnk {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    letter-spacing: 10px;
+}
+
+#button:hover, .lnk:hover {
+    opacity: 0.7;
+}

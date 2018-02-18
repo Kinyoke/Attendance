@@ -1,0 +1,31 @@
+*{box-sizing: border-box;}
+#body{ background-color: rgb(255,255,255); top: 0; left: 0; margin: 0; overflow-y: hidden; overflow-x: hidden; }
+.left-btn{ height: 60px; width: 120px; background-color: rgb(255,255,255); position: fixed; margin-top: 22%; border-top-right-radius: 50px; border-bottom-right-radius: 50px; margin-left: -58px; }
+.circle-left{ height: 55px; width: 55px; background-color: rgb(40,20,40); border-radius: 100%; float: right; margin: 3px 3px 0px 0px; }
+.line-btn{ height: 36px; width: 5px;}
+#vline{ background-color: rgb(255,255,255); margin-left: 45%; margin-top: 15%; border-radius: 5px; }
+#hline{ background-color: rgb(255,255,255); margin-left: 45%; margin-top: -65%; border-radius: 5px; transform: rotate(90deg);}
+.parent{ background-color: transparent; height: 450px; width: 300px; position: absolute; margin-left: 40%; margin-top: 6%; border-radius: 10px; text-align: center;}
+#img-container{ height: 150px; width: 150px; background-color: rgb(255,255,255); border-radius: 100%; border: 5px solid rgb(240,240,240); margin-left: 25%; margin-top: 70px;}
+#logo{ width: 85%; margin: 10px 0px 0px 0px;}
+#btn-holder{ height: 100px; width: 300px;  text-align: center; margin-top: 80px;}
+.btn-h{ height: 35px; width: 270px; margin-top: 15px; background-color: rgb(75,150,255); border-style: none; color: white; border-radius: 10px; font-weight: normal; font-size: 16px; font-family: "MathJax_Typewriter";}
+#Signin{ background-color: rgb(50,200,100); }
+
+.pop-up{ height: 70px; width: 272px; border-radius: 10px; display: none; margin-left: 41%; margin-top: 22.5%; background-color: rgb(50,50,50); position: absolute; }
+.pop-up a{ padding: 15px 30px 15px 33px; background-color: rgb(50,50,50); color: rgb(200,200,200); text-decoration: none; font-size: 15px; font-family: cursive; font-weight: bold;}
+.pop-up a:hover{ text-decoration: none; color: rgb(150,150,150); }
+#student{ float: left; border-top-left-radius: 10px;}
+#staff { float: right; border-top-right-radius: 10px; border-left: 1px solid rgb(70,70,70);}
+#pointer{ height: 20px; width: 20px; background-color: rgb(50,50,50); margin-left: 47%; margin-top: 21%; transform: rotate(45deg);}
+
+/*student reg page markup*/
+#bpane{ background-color: rgb(240,240,240); width: 290px; height: 410px; position: absolute; margin: 7% 40%;}
+#bpane h1{ font-size: 22px; margin: 20px 0px 20px 0px; padding: 15px 0px 20px 35px; color: rgb(200,200,200); font-family: 'MathJax_Fraktur'; font-weight: bold; background-color: rgb(255,255,255); }
+form{ width: 290px; }
+.form-item{ height: 30px; width: 260px;  color: rgb(50,50,50); margin: 5px 0px 10px 15px; font-family: courier; font-size: 13px; border-style: none; border-radius: 5PX; background-color: rgb(255,255,255);}
+#submit{ width: 260px; height: 35px; color: rgb(250,250,250); background-color: rgb(50,180,50); font-family: cursive; font-weight: bold; font-size: 12px; border-style: none; border-radius: 5px; margin: 20px 0px 0px 15px; }
+#major{ width: 200px; height: 30px;  color: rgb(50,50,50); border-bottom-left-radius: 5px; border-top-left-radius: 5px; font-family: courier; margin: 10px 10px 10px 15px; border-style: none; background-color: rgb(255,255,255);}
+#year{ width: 55px; height: 30px; border-style: none;  color: rgb(50,50,50); border-style: none; background-color: rgb(255,255,255); margin: 0px 5px 5px -10px; padding: 0px 0px 5px 0px;}
+#course{ width: 260px; height: 30px;  color: rgb(50,50,50); border-bottom-left-radius: 5px; border-top-left-radius: 5px; font-family: courier; margin: 5px 10px 10px 15px; border-style: none; background-color: rgb(255,255,255); }
+#module{ width: 260px; height: 30px;  color: rgb(50,50,50); border-bottom-left-radius: 5px; border-top-left-radius: 5px; font-family: courier; margin: 5px 10px 10px 15px; border-style: none; background-color: rgb(255,255,255); }

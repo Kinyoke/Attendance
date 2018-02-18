@@ -1,0 +1,198 @@
+BEFORE REGISTRATION.
+
+VISIT -> www.MAIN-SITE.com
+
+faculty registration:
+-> visit main page.
+-> fill in the following information.
+1. Full name
+2. email
+3. course
+4. module
+-> click "submit" to complete reg session.
+
+student registration:
+-> visit main page.
+-> fill in the following information
+1. Full name.
+2. student id
+3. major
+4. year
+
+5. <background> retrieve student email.
+
+-> click "submit" to complete reg session.
+
+
+AFTER REGISTRATION.
+
+HOW IT WORKS...
+
+
+-> faculty login:
+
+1. visit main page
+2. click "sign in" button
+3. create a new session & share. (after creating a session and sharing it, shared members will immediately be able to check in before 20 minutes after the session, after 20 minutes the session will end and the checkin poll will be closed).
+
+
+
+-> students
+1. visit main page 
+2. login
+3. on the home page choose the "check in" button. 
+
+
+
+RESOURCES:
+
+For: Beau Plan Business Park
+GPS coordinates(LT&LN): -20.097264, 57.573271
+						-20.097825, 57.573275
+						-20.097501, 57.573254
+
+For: African Leadership College (Beau Plan Business Park, west building, Pamplemousses)
+GPS coordinates(LT&LN): -20.097638, 57.573310
+						-20.097641, 57.573310
+
+For: Super U Grand Baie
+GPS coordinates(LT&LN):	-20.012248, 57.587089
+						-20.012248, 57.587088
+
+
+			STATUS:
+
+			-present
+			-absent
+			-sick
+			-holiday
+			-break
+			-other
+			-pending
+
+DATABASE: Attendence_ALU_MU.
+	statement:
+	create database Attendance_ALU_MU; 
+
+ps: @ALUattendance2018
+
+
+TABLES:
+
+
+1.  staffulty.
+	
+	statement:
+create table staffulty(ID int not null primary key auto_increment, FirstName varchar(16), MiddleName varchar(16), LastName varchar(16), Email varchar(32));
+
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| ID         | int(11)     | NO   | PRI | NULL    | auto_increment |
+| FirstName  | varchar(16) | YES  |     | NULL    |                |
+| MiddleName | varchar(16) | YES  |     | NULL    |                |
+| LastName   | varchar(16) | YES  |     | NULL    |                |
+| Email      | varchar(32) | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+
+
+
+2.  students.
+
+	statement:
+create table students(profID int not null primary key auto_increment, FirstName varchar(16), MiddleName varchar(16), LastName varchar(16), Student_Id varchar(16), Major varchar(32), Year varchar(1), Email varchar(32));
+
++------------+-------------+------+-----+---------+----------------+
+| Field      | Type        | Null | Key | Default | Extra          |
++------------+-------------+------+-----+---------+----------------+
+| profID     | int(11)     | NO   | PRI | NULL    | auto_increment |
+| FirstName  | varchar(16) | YES  |     | NULL    |                |
+| MiddleName | varchar(16) | YES  |     | NULL    |                |
+| LastName   | varchar(16) | YES  |     | NULL    |                |
+| Student_Id | varchar(16) | YES  |     | NULL    |                |
+| Major      | varchar(32) | YES  |     | NULL    |                |
+| Year       | varchar(1)  | YES  |     | NULL    |                |
+| Email      | varchar(32) | YES  |     | NULL    |                |
++------------+-------------+------+-----+---------+----------------+
+
+
+3.  attendance
+
+	statement:
+	create table attendance(ID int not null primary key auto_increment, studentID int, Day date, Major varchar(32), Module varchar(64), Status varchar(16),  FOREIGN KEY (studentID) REFERENCES students(profID));
+
++-----------+-------------+------+-----+---------+----------------+
+| Field     | Type        | Null | Key | Default | Extra          |
++-----------+-------------+------+-----+---------+----------------+
+| ID        | int(11)     | NO   | PRI | NULL    | auto_increment |
+| studentID | int(11)     | YES  | MUL | NULL    |                |
+| Day       | date        | YES  |     | NULL    |                |
+| Major     | varchar(32) | YES  |     | NULL    |                |
+| Module    | varchar(64) | YES  |     | NULL    |                |
+| Status    | varchar(16) | YES  |     | NULL    |                |
++-----------+-------------+------+-----+---------+----------------+
+
+
+4.  Location.
+	
+	statement:
+	create table Location(ID int not null primary key auto_increment, LocationName varchar(64), Latitude varchar(16), Longitude varchar(16));
+
++--------------+-------------+------+-----+---------+----------------+
+| Field        | Type        | Null | Key | Default | Extra          |
++--------------+-------------+------+-----+---------+----------------+
+| ID           | int(11)     | NO   | PRI | NULL    | auto_increment |
+| LocationName | varchar(64) | YES  |     | NULL    |                |
+| Latitude     | varchar(16) | YES  |     | NULL    |                |
+| Longitude    | varchar(16) | YES  |     | NULL    |                |
++--------------+-------------+------+-----+---------+----------------+
+
+
+5.  session.
+
+	statement:
+	create table session(ID int not null primary key auto_increment, Generator varchar(32), Day date, Major varchar(32), Module varchar(64), StartTime time, EndTime time, Location varchar(64), LAN_Address varchar(32), WAN_Address varchar(32), SessionID varchar(25));
+
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| ID          | int(11)     | NO   | PRI | NULL    | auto_increment |
+| Generator   | varchar(32) | YES  |     | NULL    |                |
+| Day         | date        | YES  |     | NULL    |                |
+| Major       | varchar(32) | YES  |     | NULL    |                |
+| Module      | varchar(64) | YES  |     | NULL    |                |
+| StartTime   | time        | YES  |     | NULL    |                |
+| EndTime     | time        | YES  |     | NULL    |                |
+| Location    | varchar(64) | YES  |     | NULL    |                |
+| LAN_Address | varchar(32) | YES  |     | NULL    |                |
+| WAN_Address | varchar(32) | YES  |     | NULL    |                |
+| SessionID   | varchar(16) | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+
+
+
+
+
+
+
+ insert into students(FirstName, MiddleName, LastName, Student_Id, Major, Year, Email)values ('Farid','Ibrahim','Nussa','WX023D1LD','Computer science','3','fibrahim15@alustudent.com');
+
+
+
+ feedback;
+
+ *recurrence 
+
+
+ *dashboard
+
+ ->module view
+  >give all info
+ 
+ ->student view
+  >all the info 
+
+
+ *alert 
+	-> email
+	
